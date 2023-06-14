@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keeper-Lock</title>
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julee&family=McLaren&family=Montserrat:ital,wght@0,400;0,700;0,800;1,300;1,400;1,600&family=Poppins:wght@200&family=Roboto+Condensed&family=Sacramento&family=Ubuntu:ital,wght@0,400;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- internal css -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header"><h1>Keeper</h1></div>
+      <div class="main">
+      
+
+        <form action="/"class="input-card" id="form" method="post">
+            <input type="text" placeholder="Title :" name="newTitle"/>
+            <textarea name="newContent" class="textarea" placeholder="write Content here :"></textarea> 
+            <button name="button"><img  src="https://cdn-icons-png.flaticon.com/128/10953/10953380.png" alt="button" /></button>
+        </form>
+
+
+
+        <%for(let i in data){%>
+        <div class="card">
+          <p>Title : <%=data[i].title%></p>
+          <p><%=data[i].content%></p>
+        </div>
+        <%};%>
+      </div>
+      <div class="footer">@ Copyright 2023</div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
